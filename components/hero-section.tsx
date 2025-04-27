@@ -38,22 +38,22 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden section-spacing pt-24 md:pt-32"
       ref={scrollRef}
     >
-      <div className="absolute inset-0 gradient-bg opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5"></div>
       <div className="container mx-auto px-4 z-10 py-20 md:py-0">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
-            <h1 className="hero-animate opacity-0 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <div className="w-full md:w-1/2 space-y-8 text-center md:text-left">
+            <h1 className="hero-animate opacity-0 font-playfair text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent text-container tracking-wide">
               I build high-converting, beautiful websites that deliver results and leave lasting impressions.
             </h1>
-            <p className="hero-animate opacity-0 animate-delay-200 text-lg md:text-xl text-foreground/80 max-w-2xl">
+            <p className="hero-animate opacity-0 animate-delay-200 text-lg md:text-xl text-foreground/80 max-w-2xl text-container font-montserrat leading-relaxed">
               Bringing visions to life with clean code, stunning design, and performance that matters.
             </p>
             <Button
               size="lg"
-              className="hero-animate opacity-0 animate-delay-300 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300 text-white font-medium px-8 py-6 rounded-full"
+              className="hero-animate opacity-0 animate-delay-300 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300 text-white font-medium px-8 py-6 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1"
               onClick={() => {
                 const contactSection = document.getElementById("contact")
                 if (contactSection) {
@@ -67,9 +67,9 @@ export default function HeroSection() {
           <div className="w-full md:w-1/2 flex justify-center md:justify-end">
             <div className="hero-animate opacity-0 animate-delay-100 relative w-64 h-64 md:w-80 md:h-80">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent p-1 animate-pulse">
-                <div className="rounded-full overflow-hidden w-full h-full bg-background">
+                <div className="rounded-full overflow-hidden w-full h-full bg-background shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=320&width=320"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yumna.jpg-rRnMJ6Japd25NTSEZmuLnZAN3MmQh1.jpeg"
                     alt="Yumna Irfan"
                     width={320}
                     height={320}

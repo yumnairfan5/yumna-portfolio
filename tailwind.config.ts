@@ -53,11 +53,18 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "soft-bg": "hsl(var(--soft-bg))",
+        "deep-charcoal": "hsl(var(--deep-charcoal))",
+        "muted-navy": "hsl(var(--muted-navy))",
+        "deep-teal": "hsl(var(--deep-teal))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "1rem",
+        "2xl": "1.5rem",
+        "3xl": "2rem",
       },
       keyframes: {
         "accordion-down": {
@@ -76,6 +83,17 @@ const config = {
       fontFamily: {
         inter: ["var(--font-inter)"],
         poppins: ["var(--font-poppins)"],
+        playfair: ["var(--font-playfair)"],
+        montserrat: ["var(--font-montserrat)"],
+        raleway: ["var(--font-raleway)"],
+      },
+      spacing: {
+        "128": "32rem",
+      },
+      boxShadow: {
+        glass: "0 8px 32px 0 rgba(31, 38, 135, 0.07)",
+        "neumorphic-light": "8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff",
+        "neumorphic-dark": "8px 8px 16px #151515, -8px -8px 16px #252525",
       },
     },
   },

@@ -51,29 +51,38 @@ export default function ServicesSection() {
   }, [])
 
   return (
-    <section id="services" className="py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="service-animate opacity-0 text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+    <section id="services" className="section-spacing relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-background/60 backdrop-blur-sm z-0"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="service-animate opacity-0 text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent font-playfair tracking-wide">
           What I Offer
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card
-              key={service.title}
-              className={`service-animate opacity-0 animate-delay-${index * 100} border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden`}
-            >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent"></div>
-              <CardHeader className="pb-2">
-                <div className={`w-16 h-16 rounded-full ${service.bgColor} flex items-center justify-center mb-4`}>
-                  <service.icon className={`w-8 h-8 ${service.color}`} />
+            <div key={service.title} className={`service-animate opacity-0 animate-delay-${index * 100} group`}>
+              <Card className="border-none rounded-[24px] overflow-hidden h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-md border border-white/10 dark:border-white/5 shadow-lg group-hover:shadow-2xl">
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent opacity-70"></div>
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-primary/20 to-secondary/10 rounded-full blur-3xl"></div>
+
+                <div className="relative -mt-8 flex justify-center">
+                  <div
+                    className={`w-16 h-16 rounded-full ${service.bgColor} flex items-center justify-center shadow-lg transform transition-transform duration-300 group-hover:scale-110 group-hover:shadow-primary/20 bg-gradient-to-br from-background to-background/80 border border-white/20 dark:border-white/10`}
+                  >
+                    <service.icon className={`w-8 h-8 ${service.color}`} />
+                  </div>
                 </div>
-                <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{service.description}</p>
-              </CardContent>
-            </Card>
+
+                <CardHeader className="pb-2 pt-6">
+                  <CardTitle className="text-2xl font-playfair text-center">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="pb-8 px-6">
+                  <p className="text-muted-foreground text-container text-center font-montserrat">
+                    {service.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>
